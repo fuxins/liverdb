@@ -1,5 +1,55 @@
+<div class="container-fluid Container-fluid" style="margin-top: -10px;">
+    <div id="pageUI" style="width:85%; margin: auto;">
+      <div class="mainboxStyle">
+        <div id="home">
+          <div style="width:100%; margin:auto">
+            <img src="/static/liverdb/graph/home_merge.png" alt="List of cell type in liver" style="width:46%;">
+          </div>
+          <br>
+          <h1 class="infotextdev" style="color:#444; text-align: center;">
+            Liver Single Cell Atlas: Database of Gene Expression in Different Cells of Human and Mouse Liver
+          </h1>
 
-<p>Home page of liverdb</p>
+          <p class="infotextdev" style="margin-top: 2%;color:#444; text-align: center;">
+            Tool to search human and mouse marker genes in liver.
+            <br>
+            It also provides how genes are expressed in different cells of liver
+          </p>
+
+          <p class="infotextdev" style="margin-top: 2%;color:#444">
+            Click on Human or Mouse icon to display their search boxes.
+            <a href="/help.jsp">
+              <strong>Learn more</strong>
+            </a>
+          </p>
+          <div class="icondiv">
+            <div>
+              <a href="/search.jspHuman" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;link&#39;, &#39;access&#39;, &#39;Human Database&#39;);"><img src="/static/liverdb/graph/humanlogo.gif" alt="Human" class="iconHuman"></a>
+              <a href="/search.jspMouse" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;link&#39;, &#39;access&#39;, &#39;Mouse Database&#39;);"><img src="/static/liverdb/graph/mouselogo.gif" alt="Mouse" class="iconMouse"></a>
+            </div>
+          </div>
+
+          <br>
+          <br>
+          
+
+          <div class="modifiers">
+            <p class="infotextdev" style="margin-top: 2%;color:#444">
+            <span>Alternatively, you can browse the liver genes expression of </span>
+                    <a href="/browse.jsp"><strong>Human and Mouse</strong></a>
+                   <span> and cell markers in different cells. </span>
+          </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<div id="ss-connect-dialog" style="display: none;"></div>
+      <div id="ss-overlay" class="ss-gray-out" style="display: none;"></div>
+      <div class="jvectormap-tip"></div>
 
 
 

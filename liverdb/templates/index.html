@@ -3,18 +3,12 @@
 <head>
 
     <meta charset="utf-8">
-    <title>liverdb</title>
+    <title>LiverSingleCellAtlas</title>
+    <link rel="shortcut icon" href="static/liverdb/graph/logo.ico">
 
     <!--link rel="icon" href="/static/liverdb/img/miRNASNP2.0_logo.PNG"-->
 
-
-    <link rel="stylesheet" href="/static/liverdb/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/liverdb/lib/bootstrap-slider/css/bootstrap-slider.css">
-    <link rel="stylesheet" href="/static/liverdb/css/main.css">
-    <link rel="stylesheet" href="/static/liverdb/lib/bootstrap-select/dist/css/bootstrap-select.css">
-    <link rel="stylesheet" href="static/liverdb/lib/angular-tablesort/tablesort.css">
-    <!--link rel='stylesheet' href="/static/liverdb/lib/fornac/app/styles/fornac.css"-->
-
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/static/liverdb/lib/angular/angular.js"></script>
     <script src="/static/liverdb/lib/angular/angular-route.js"></script>
     <script src="/static/liverdb/lib/angular/angular-resource.js"></script>
@@ -31,6 +25,16 @@
     <script src="/static/liverdb/lib/echarts/echarts.min.js"></script>
     <script src="/static/liverdb/lib/angular-tablesort/angular-tablesort.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/static/liverdb/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/liverdb/lib/bootstrap-slider/css/bootstrap-slider.css">
+    <link rel="stylesheet" href="/static/liverdb/css/main.css">
+    <link rel="stylesheet" href="/static/liverdb/lib/bootstrap-select/dist/css/bootstrap-select.css">
+    <link rel="stylesheet" href="static/liverdb/lib/angular-tablesort/tablesort.css">
+    <link rel="stylesheet" type="text/css" href="/static/liverdb/css/mystyle.css">
+    <!--link rel='stylesheet' href="/static/liverdb/lib/fornac/app/styles/fornac.css"-->
+
     <script src="/static/liverdb/js/app.js"></script>
     <script src="/static/liverdb/js/home.controller.js"></script>
     <script src="/static/liverdb/js/test.js"></script>
@@ -44,7 +48,7 @@
 <div ng-include="'/static/liverdb/partials/navigation.html'" class="ng-scope">
 
 </div>
-<div class="container" style="background-color: white;width: auto;">
+<div class="container" style="background-color: rgb(204, 232, 207);width: auto;">
     <div ng-view></div>
 </div>
 

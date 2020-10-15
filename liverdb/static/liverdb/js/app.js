@@ -7,6 +7,10 @@ angular.module('liverdb', ['ui.bootstrap', 'ngRoute', 'pageslide-directive', 'ui
                 templateUrl: "/static/liverdb/pages/home.html",
                 controller: "HomeController"
             })
+            .when("/home",{
+                templateUrl: "/static/liverdb/pages/home.html",
+                controller: "HomeController"
+            })
             .when("/document", {
                 templateUrl: "/static/liverdb/pages/document.html",
                 //controller: "HomeController"

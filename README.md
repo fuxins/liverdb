@@ -1,2 +1,2 @@
-# liverdb
-A database for liver cance
+# Liver Single Cell Atlas
+A database for liver cancer

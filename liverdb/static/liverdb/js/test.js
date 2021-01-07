@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('miRNASNP3')
+angular.module('liverdb')
     .controller('TestController', TestController)
     .controller('Test2Controller', Test2Controller)
     .controller('Test3Controller', Test3Controller);

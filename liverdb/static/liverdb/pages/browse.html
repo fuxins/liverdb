@@ -1,0 +1,44 @@
+<div>
+    <p>We scanned xx project from xxxx. A total of xxx cells are involved in Live Cell Atlas.</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label col-lg-1">Spescies:</label>
+    <div class="col-lg-3">
+        <select id="species" class="form-control">
+            <option>Human</option>
+            <option>Mouse</option>
+        </select>   
+    </div>
+    <label class="control-label col-lg-1">Condition:</label>
+    <div class="col-lg-3">
+        <select id="condition" class="form-control">
+            <option>treatment</option>
+            <option>condition1</option>
+            <option>condition2</option>
+        </select>
+    </div>
+</div>
+<br>
+<div>
+    <table class="table" style="table-layout:fixed;padding-top: 15px;">
+        <thead>
+            <tr>
+                <th>Species</th>
+                <th>Title</th>
+                <th>Journal</th>
+                <th>Year</th>
+                <th>Condition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="v in project_list">
+                <td>{$v.species$}</td>
+                <td>{$v.title$}</td>
+                <td>{$v.journal$}</td>
+                <td>{$v.year$}</td>
+                <td>{$v.condition$}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

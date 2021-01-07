@@ -1,293 +1,60 @@
-<div class="col-lg-8">
-    <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightgrey;" >
-                   Cell search 
-                </div>
-                
-                <div class="panel-body " >
-                                <div class="col-lg-6"> 
-                                     <div class="form-group">
-                                            <label>Species </label>
-                                            <select id="species" class="form-control">
-                                                <option>Human</option>
-                                                <option>Mouse</option>
-                                            </select>
-                                     </div>
-                                 </div>
-                                 
-                                  <div class="col-lg-6"> 
-                                     <div class="form-group">
-                                                <label>Condition</label>
-                                                <select id="conditionType" class="form-control">
-                                                    <option value=Normal selected>Normal</option>
-                                                    <option value=Cancer>Cancer</option>
-                                                    <option value=Disease>Disease</option>
-                                                </select>                      
-                                     </div>
-                                 </div>
-                                 
-                                 
-                                 <div class="col-lg-6">
-                                     <div class="form-group">
-                                            <label>Tissue Type</label>                                            
-                                                <select id="tissueType" name="tissueType" class="form-control" title="Select a element" data-hide-disabled="true">
-                                                    <option value=Adult selected>Adult Liver</option>
-                                                    <option value=Fetal>Fetal Liver</option>
-                                                    <option value="Yolk sac">Yolk sac</option>
-                                                </select>
-                                        </div>
-                                     </div>       
-                                 
-                                 
-                                 <div class="col-lg-6">
-                                    <div class="form-group" >
-                                        <label>Cell Type</label>
-                                        <div class="form-group">
-                                            <input class="form-control" placeholder="please select cell by blow tree" name="cellName" id="cellName" >
-                                        </div> 
-                                                    
-                                    </div>
-                                    
-                                    <div style="border: 1px solid #ddd;border-radius: 4px;">
-                                             
-                                             <input type="text" class=" form-control" id="treeDemoCellSearchkey">
-                                             <div id="theTreeBrowseCell" style="width:100%; height:394px; margin-top:5px; overflow:auto;">
-                                                 <ul id="treeDemoCell" class="ztree">
-                                                 </ul>
-                                             </div>
-                                     </div>
-                                 </div>
-                                
-                                 <div class="col-lg-12" style="padding:15px 0px 15px 15px; ">
-                                     <div>
-                                          <button type="button" onclick="querySearch(' ','true')" class="btn btn-primary" style="width:80px; float: right; margin-right: 10px;">Submit</button>
-                                          <button type="reset" onclick="resetClick()" class="btn btn-default"  style="width:80px; float: right; margin-right: 10px;">Reset</button>
-                                          
-                                          <button type="button" onclick="demoSearchNode('Blood', 'B cell')" class="btn btn-default"  style="width:80px; float:right; margin-right: 10px;">Demo</button>
-                                          
-                                          <div id="waitingDiv" style="display:none; float:left;">
-                                            <span class="mif-spinner4 mif-ani-spin mif-3x"></span><span> Loading...</span>
-                                         </div> 
-                                        
-                                          <div style="clear:both;"></div>
-                                     </div>
-                                 </div> 
-                                 
-                             
-                           </form>
-                    
-                    </div>
-                    
-                        
-                        <div style="clear:both;">
-                    </div>
-                </div>
-</div>	
 
-<div class="col-lg-4">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <i class="fa fa-search fa-fw"></i>Marker search 
-            <i class="fa fa-question-circle" id="cellSearchTip" style="color: #1C75BC;display:none;"></i>
+<div class="container" style="width: auto;height: 80px;padding-left: 0px;padding-right: 0px;background-color:#ADD8E6">
+    <div class="form-group" style="padding-top: 10px;">
+        <div>
+            <label class="control-label col-lg-1">Spescies:</label>
+            <div class="col-lg-3">
+                <select id="query_species" class="form-control">
+                    <option>Human</option>
+                    <option>Mouse</option>
+                </select>   
+            </div>
         </div>
-                <div class="panel-body">
-                    <form role="form" id="markerform" name="uploadform"  enctype="multipart/form-data">
-                         <div class="form-group">
-                                    <label>Species </label>
-                                    <select id="species" class="form-control">
-                                        <option>Human</option>
-                                        <option>Mouse</option>
-                                    </select>
-                                              
-                         </div>
-                       
-                         <div class="form-group">
-                                    <label >Cell Marker</label>
-                                    <input class="form-control" placeholder="" name="cellMarker" id="cellMarker">
-                         </div>
-                         <div style="margin-bottom: 10px;">
-                             <b>&nbsp;Example:</b>
-                             <br>
-                             &nbsp;Gene alias: <span style="cursor:pointer;color:#5C80A2;" onclick="$('#cellMarker').val('CD133'); $('#cellMarkerSpeciesType').val('Human'); $('#cellMarkerSpeciesType').trigger('change');">CD133</span>
-                             <br>
-                             &nbsp;Gene symbol: <span style="cursor:pointer;color:#5C80A2;" onclick="$('#cellMarker').val('PROM1'); $('#cellMarkerSpeciesType').val('Human'); $('#cellMarkerSpeciesType').trigger('change');">PROM1</span>
-                            <br>
-                            &nbsp;Gene ID: <span style="cursor:pointer;color:#5C80A2;" onclick="$('#cellMarker').val('8842'); $('#cellMarkerSpeciesType').val('Human'); $('#cellMarkerSpeciesType').trigger('change');">8842</span>
-                            <br>
-                            &nbsp;Protein symbol: <span style="cursor:pointer;color:#5C80A2;" onclick="$('#cellMarker').val('PROM1'); $('#cellMarkerSpeciesType').val('Human'); $('#cellMarkerSpeciesType').trigger('change');">PROM1</span>
-                         </div>
-                         
-                         <div>
-                              <button type="button" onclick="quickMarkerSearch(' ','true')" class="btn btn-primary" style="width:80px; float:left; margin-right: 10px;">Submit</button>
-                              <button type="reset" onclick="resetMarkerSearchClick()" class="btn btn-default"  style="width:80px; float:left; margin-right: 10px;">Reset</button>
-                              <div id="waitingDivMarker" style="display:none; float:left;">
-                                <span class="mif-spinner4 mif-ani-spin mif-3x"></span><span> Loading...</span>
-                             </div> 
-                            
-                              <div style="clear:both;"></div>
-                         </div>
-                         
-                        
-                    </form>
-                </div>
-    </div>				
-</div>
+        <div>
+            <label class="control-label col-lg-1">Condition:</label>
+            <div class="col-lg-3">
+                <select id="query_condition" class="form-control">
+                    <option>treatment</option>
+                    <option>condition1</option>
+                    <option>condition2</option>
+                </select>
+            </div>
+        </div>
 
-<div class="col-lg-4">
-    <div class="panel panel-default">
-                <div class="panel-heading">
-                    <i class="fa fa-tags"></i> Notes
-                </div>
-                <div class="panel-body" style="font-size: 1rem; ">
-                <p>
-                    <b>Cell Search module</b> 
-                    <br>
-                    You can search cell markers by choosing species, condition, tissue type and cell type.
-                <p>
-                    <b>Marker module</b> 
-                    <br>
-                    You can search the database by choosing species and a specific cell marker. The cell marker can be searched using gene symbol, Entrez gene ID.
-                </p>
-                    
-                </div>
+        <div>
+            <label class="control-label col-lg-1">Cell-type:</label>
+            <div class="col-lg-3">
+                <select id="query_celltype" class="form-control">
+                    <option>T cell</option>
+                    <option>B cell</option>
+                    <option>NK</option>
+                </select>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="col-lg-12" style="display: none;" id="wordCloudContainer">
-    <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-bar-chart-o"></i> Statistical graph of cell markers
-                <span style="cursor: pointer; color: #1C75BC; float: right;display:none;" class="fa fa-download" onclick="downloadMarkerNumber('cellmarker','','','','')" id="downloadMarkerNumber"> Download</span>
-            </div>
-            <div class="panel-body" style="font-size: 0.9rem; ">
-                <div class="col-lg-9" style="padding-right:10px; padding-left:5px; border-right: 1px solid #ced4da;">
-                    <div id="wordCloudChart" style="height: 100%; width: 100%; min-height: 450px;"></div>
-                </div>
-                
-                
-                <div class="col-lg-3" style=" padding-left:20px; padding-right:0px;">
-                    <div id="wordCloudresults" style="width:100%;padding-top:0px">
-                        <table id='wordCloudtestTable' class="table table-striped table-bordered table-hover" style="width:100%;"></table>
-                    </div>
-                </div>
-                
-                
-                <div id="wordCloudChartDownloadForm" style="display:none;"></div>
-                <div style="clear:both;"></div>
-            </div>
-            
-            
-    </div>
-</div>
-
-<div class="col-lg-12" style="display: none;" id="bubble3DContainer">
-    <div class="panel panel-default">
-            <div class="panel-heading" >
-                <i class="fa fa-bar-chart-o"></i> Statistical graph of the searching cell marker
-            </div>
-            <div class="panel-body" style="font-size: 0.9rem; ">
-                <div id="bubble3DContainer" style="overflow: auto; margin: 0px auto;">
-                    <div id="bubble3D" style="min-width: 310px; min-height: 400px; margin: 0px auto;"></div>
+<div class="container" style="width: auto;height: 80px;padding-left: 0px;padding-right: 0px;background-color:#DBDBDB">
+    <div class="form-group" style="padding-top: 10px;">
+        <div>
+            <label class="control-label col-lg-1">DataSet:</label>
+            <div class="col-lg-3">
+                <div id="query_gene" class=" ui-widget has-feedback inner-addon right-addon">
+                    <input name="query_gene" type="text" id="query_gene" class="form-control ui-autocomplete-input" placeholder="GSE84498" autocomplete="off">
+                    <span class="glyphicon form-control-feedback"></span>
+                    <label class="control-label" for="annotations"></label>
                 </div>
             </div>
-    </div>
-</div>
-
-<div class="col-lg-12" style="display: none;" id="resultsDiv">
-    <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-th"></i> Result <i class="fa fa-question-circle TIPqTip" id="resultTip" style="display:none; "></i>
+        </div>
+        <div>
+            <label class="control-label col-lg-1">Gene:</label>
+            <div class="col-lg-3">
+                <div id="query_gene" class=" ui-widget has-feedback inner-addon right-addon">
+                    <input name="query_gene" type="text" id="query_gene" class="form-control ui-autocomplete-input" placeholder="CD4" autocomplete="off">
+                    <span class="glyphicon form-control-feedback"></span>
+                    <label class="control-label" for="annotations"></label>
+                </div> 
             </div>
-            <div class="panel-body" style="font-size: 0.9rem; ">
-                
-                
-                <div style="text-align: left;">
-                    
-                    <table style="border: 0px solid #ddd;background: white;">
-                        <tr style="background: white;"> 
-                            <td colspan=8>
-                            <b><i class="fa fa-tags"></i> Source</b>
-                            </td>
-                        </tr>
-                        <tr style="background: white;">
-                            
-                            <!-- <td>
-                                <img class="" src="images/userImages/singleCell.png" style="display:inline-block; width:25px;">
-                            </td>
-                            <td>Single-cell sequencing</td>
-                            <td>
-                                <img class="" src="images/userImages/experimentation.png" style="display:inline-block; width:25px;">
-                            </td>
-                            <td>Experiment</td>
-                            
-                            <td>
-                                <img class="" src="images/userImages/review.png" style="display:inline-block; width:25px;">
-                            </td>
-                            <td>Review</td>
-                            <td>
-                                <img class="" src="images/userImages/company.png" style="display:inline-block; width:25px;">
-                            </td>
-                            <td>Company</td> -->
-                        </tr>
-                    </table>
-                    
-                </div>
-                
-                <div id="results" style="width:100%;padding-top:0px">
-                    <table id='testTable' class="table table-striped table-bordered table-hover" style="width:100%;"></table>
-                </div>
-                
-                
-                <div class="panel panel-default" id="SingleCellSequencingContainer" style="display: none;" >
-                    <div class="panel-heading" style="">
-                        <img class="" src="images/userImages/singleCell.png" style="display:inline-block; width:25px;"> Single-cell sequencing
-                    </div>
-                    <div class="panel-body" style="">
-                        <div id="SingleCellSequencingresults" style="width:100%;padding-top:0px">
-                            <table id='SingleCellSequencingtestTable' class="table table-striped table-bordered table-hover" style="width:100%;"></table>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="panel panel-default" id="ExperimentContainer" style="display: none;" >
-                    <div class="panel-heading" style="">
-                        <img class="" src="images/userImages/experimentation.png" style="display:inline-block; width:25px;"> Experiment
-                    </div>
-                    <div class="panel-body" style="">
-                        <div id="Experimentresults" style="width:100%;padding-top:0px">
-                            <table id='ExperimenttestTable' class="table table-striped table-bordered table-hover" style="width:100%;"></table>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="panel panel-default" id="ReviewContainer" style="display: none;" >
-                    <div class="panel-heading" style="">
-                        <img class="" src="images/userImages/review.png" style="display:inline-block; width:25px;"> Review
-                    </div>
-                    <div class="panel-body" style="">
-                        <div id="Reviewresults" style="width:100%;padding-top:0px">
-                            <table id='ReviewtestTable' class="table table-striped table-bordered table-hover" style="width:100%;"></table>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="panel panel-default" id="CompanyContainer" style="display: none;" >
-                    <div class="panel-heading" style="">
-                        <img class="" src="images/userImages/company.png" style="display:inline-block; width:25px;"> Company
-                    </div>
-                    <div class="panel-body" style="">
-                        <div id="Companyresults" style="width:100%;padding-top:0px">
-                            <table id='CompanytestTable' class="table table-striped table-bordered table-hover" style="width:100%;"></table>
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-                
-                
+        </div>
     </div>
 </div>

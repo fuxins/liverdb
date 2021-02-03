@@ -28,10 +28,10 @@
                 <th>Accession</th>
                 <th>Species</th>
                 <th>Title</th>
-                <th>Journal</th>
-                <th>Year</th>
+                <th>Journal(year)</th>
                 <th>No. cells</th>
                 <th>PMID</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
@@ -39,10 +39,15 @@
                 <th>{$v.Accession$}</th>
                 <td>{$v.Species$}</td>
                 <td>{$v.Title$}</td>
-                <td>{$v.Journal$}</td>
-                <td>{$v.Year$}</td>
+                <td>{$v.Journal$}({$v.Year$})</td>
                 <td>{$v.cell_count$}</td>
-                <th>{$v.PMID$}</th>
+                <td>{$v.PMID$}</td>
+                <td>
+                    <span>
+                        <a href="#!/project_detalils?project_id={$v.project_id$}" style="color:#C0C0C0">
+                            <button id="project_detail"  style="width: 60px;height:30px;text-align: right" >Details</button>
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>

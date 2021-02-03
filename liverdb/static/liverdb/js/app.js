@@ -30,6 +30,10 @@ angular.module('liverdb', ['ui.bootstrap', 'ngRoute', 'pageslide-directive', 'ui
             .when("/test",{
                 templateUrl:"/static/liverdb/lib/fornac/dist/test.html",
             })
+            .when("/project_detail",{
+                templateUrl:"//static/liverdb/pages/projectDetail.html",
+                controller:"ProjectDetailController"
+            })
             .otherwise({
                 redirectTo: "/404.html"
             });

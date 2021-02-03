@@ -29,10 +29,13 @@ class GetProject(Resource):
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument("species")
+        parser.add_argument("PMID")
         args = parser.parse_args()
         condition = {}
         if args["species"] != "All":
             condition['Species'] = args["species"]
+        if args['PMID']:
+            condition['PMID']=args['PMID']
         print(condition)
         project_list = mongo.db.dataset.find(condition)
         project_count = mongo.db.dataset.find(condition).count()

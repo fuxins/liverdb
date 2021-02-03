@@ -31,11 +31,11 @@ class GetProject(Resource):
         parser.add_argument("species")
         args = parser.parse_args()
         condition = {}
-        if args["species"]:
+        if args["species"] != "All":
             condition['Species'] = args["species"]
         print(condition)
-        project_list = mongo.db.projects.find(condition)
-        project_count = mongo.db.projects.find(condition).count()
+        project_list = mongo.db.dataset.find(condition)
+        project_count = mongo.db.dataset.find(condition).count()
 
         return {"project_list":list(project_list),"project_count":project_count}
 

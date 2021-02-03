@@ -7,11 +7,18 @@ from liverdb.core import mongo
 from flask_restful import Resource, fields, marshal_with, reqparse, marshal
 
 project={
-    "species":fields.String,
-    "title":fields.String,
-    "journal":fields.String,
-    "year":fields.String,
-    "condition":fields.String
+    "PMID":fields.String,
+    "Title":fields.String,
+    "Journal":fields.String,
+    "Year":fields.String,
+    "Protocol":fields.String,
+    "Accession":fields.String,
+    "Species":fields.String,
+    "Stage":fields.String,
+    "Source":fields.String,
+    "gene_count":fields.String,
+    "cell_count":fields.String,
+    "Description":fields.String
 }
 project_list={
     "project_list":fields.Nested(project),
@@ -25,7 +32,7 @@ class GetProject(Resource):
         args = parser.parse_args()
         condition = {}
         if args["species"]:
-            condition['species'] = args["species"]
+            condition['Species'] = args["species"]
         print(condition)
         project_list = mongo.db.projects.find(condition)
         project_count = mongo.db.projects.find(condition).count()

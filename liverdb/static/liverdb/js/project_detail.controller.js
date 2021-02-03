@@ -3,7 +3,7 @@
 angular.module('liverdb')
     .controller('ProjectDetailController', ProjectDetailController);
 
-function PrrojectDetailController($scope,$http,$routeParams,$window) {
+function ProjectDetailController($scope,$http,$routeParams,$window) {
     $scope.pmid=$routeParams.pmid
     var condition={}
     console.log("ProjectDetailController loaded");

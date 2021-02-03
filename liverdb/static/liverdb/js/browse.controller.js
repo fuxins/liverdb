@@ -30,7 +30,8 @@ function BrowseController($scope,$http,$routeParams,$window) {
     var obj = document.getElementById("species");
     obj.onchange = function(){
         var species=$("#species option:selected").text();   
-        condition['species']=species.toLowerCase()
+        //condition['species']=species.toLowerCase()
+        condition['species']=species
         console.log("get species")
         console.log(species)
         $http({

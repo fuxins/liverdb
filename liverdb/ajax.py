@@ -32,8 +32,9 @@ class GetProject(Resource):
         parser.add_argument("PMID")
         args = parser.parse_args()
         condition = {}
-        if args["species"] != "All":
-            condition['Species'] = args["species"]
+        if args['species']:
+            if args["species"] != "All":
+                condition['Species'] = args["species"]
         if args['PMID']:
             condition['PMID']=args['PMID']
         print(condition)

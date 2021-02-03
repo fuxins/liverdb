@@ -31,7 +31,7 @@ class GetProject(Resource):
         parser.add_argument("species")
         args = parser.parse_args()
         condition = {}
-        if args["species"] != "all":
+        if args["species"] != "All":
             condition['Species'] = args["species"]
         print(condition)
         project_list = mongo.db.dataset.find(condition)

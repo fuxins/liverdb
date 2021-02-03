@@ -16,10 +16,10 @@ function ProjectDetailController($scope,$http,$routeParams,$window) {
         }).then(function(response){
             console.log("project_list")
             $scope.project=response.data.project_list[0]
-            $scope.project.Accession=$scope.project.Accession.replace(/\"/,"")
-            $scope.project.Protocol=$scope.project.Protocol.replace(/\"/,"")
-            $scope.project.gene_count=$scope.project.gene_count.replace(/\"/,"")
-            $scope.project.cell_count=$scope.project.cell_count.replace(/\"/,"")
+            $scope.project.Accession=$scope.project.Accession.replace(/\"/g,"")
+            $scope.project.Protocol=$scope.project.Protocol.replace(/\"/g,"")
+            $scope.project.gene_count=$scope.project.gene_count.replace(/\"/g,"")
+            $scope.project.cell_count=$scope.project.cell_count.replace(/\"/g,"")
             $scope.project_count=response.data.project_count
             console.log($scope.project);
 

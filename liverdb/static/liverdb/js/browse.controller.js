@@ -25,10 +25,10 @@ function BrowseController($scope,$http,$routeParams,$window) {
             console.log($scope.project_list);
             var arr=$scope.project_list
             for ( var i = 0; i <arr.length; i++){
-               arr[i].Accession=arr[i].Accession.replace(/\"/,"")
-               arr[i].Protocol=arr[i].Protocol.replace(/\"/,"")
-               arr[i].gene_count=arr[i].gene_count.replace(/\"/,"")
-               arr[i].cell_count=arr[i].cell_count.replace(/\"/,"")
+               arr[i].Accession=arr[i].Accession.replace(/\"/g,"")
+               arr[i].Protocol=arr[i].Protocol.replace(/\"/g,"")
+               arr[i].gene_count=arr[i].gene_count.replace(/\"/g,"")
+               arr[i].cell_count=arr[i].cell_count.replace(/\"/g,"")
             }
             $scope.project_list=arr
         })
@@ -52,10 +52,10 @@ function BrowseController($scope,$http,$routeParams,$window) {
             console.log($scope.project_list);
             var arr=$scope.project_list
             for ( var i = 0; i <arr.length; i++){
-               arr[i].Accession=arr[i].Accession.replace(/\"/,"")
-               arr[i].Protocol=arr[i].Protocol.replace(/\"/,"")
-               arr[i].gene_count=arr[i].gene_count.replace(/\"/,"")
-               arr[i].cell_count=arr[i].cell_count.replace(/\"/,"")
+               arr[i].Accession=arr[i].Accession.replace(/\"/g,"")
+               arr[i].Protocol=arr[i].Protocol.replace(/\"/g,"")
+               arr[i].gene_count=arr[i].gene_count.replace(/\"/g,"")
+               arr[i].cell_count=arr[i].cell_count.replace(/\"/g,"")
             }
             $scope.project_list=arr
 

@@ -17,7 +17,7 @@ function ProjectDetailController($scope,$http,$routeParams,$window) {
             console.log("project_list")
             $scope.project=response.data.project_list[0]
             $scope.project_count=response.data.project_count
-            console.log($scope.project_list);
+            console.log($scope.project);
 
         })
     }

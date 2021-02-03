@@ -25,7 +25,7 @@ function BrowseController($scope,$http,$routeParams,$window) {
 
         })
     }
-
+    $scope.getproject()
     var obj = document.getElementById("species");
     obj.onchange = function(){
         var species=$("#species option:selected").text();   

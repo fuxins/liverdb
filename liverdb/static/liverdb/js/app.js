@@ -31,7 +31,7 @@ angular.module('liverdb', ['ui.bootstrap', 'ngRoute', 'pageslide-directive', 'ui
                 templateUrl:"/static/liverdb/lib/fornac/dist/test.html",
             })
             .when("/project_detail",{
-                templateUrl:"//static/liverdb/pages/projectDetail.html",
+                templateUrl:"/static/liverdb/pages/projectDetail.html",
                 controller:"ProjectDetailController"
             })
             .otherwise({

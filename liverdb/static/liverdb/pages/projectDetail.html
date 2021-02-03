@@ -19,6 +19,38 @@
                     {$project.Accession$}
                 </td>
             </tr>
+            <tr>
+                <td style="font-size: 18px;" width="200px" >
+                    <strong>PubMed</strong>
+                </td>
+                <td style="text-align: left" colspan="6">
+                    {$project.Title$};{$project.Journal$}({$project.Year$});{$project.PMID$}
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 18px;" width="200px" >
+                    <strong>Description</strong>
+                </td>
+                <td style="text-align: left" colspan="6">
+                    {$project.Description$}
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 18px;" width="200px" >
+                    <strong>Protocol</strong>
+                </td>
+                <td style="text-align: left" colspan="6">
+                    {$project.Protocol$}
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 18px;" width="200px" >
+                    <strong>Condition</strong>
+                </td>
+                <td style="text-align: left" colspan="6">
+                    {$project.Stage$}; {$project.Source$}
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

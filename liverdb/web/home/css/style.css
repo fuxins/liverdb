@@ -1,0 +1,385 @@
+.container .page {
+			background: #fff;
+			padding:10px;
+			margin-bottom: 50px;
+			box-shadow: 1px 3px 1px #ddd;
+		}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+/* Datatable css 修改 */
+		/* 修改 DataTable 的样式*/
+		tr.highlight {
+			cursor:auto;
+    		background-color: whitesmoke !important;
+		}
+		.linkTd{
+			color:#00548B;
+			cursor:pointer;
+		}
+	/* 特定id table设定最后一列含有背景颜色 */
+	table#allSamplesColor tr td:last-child{
+		 /* background-color: #2b579a; */
+		 width:5px;
+		}
+	/* search 放到左边 */
+	/* #allSamplesColorDiv .dataTables_filter {
+		text-align: left !important;
+		float: left !important; 
+	} */
+	/* search 放到左边 */
+	/*search input 更改 */
+	#allSamplesColorDiv .dataTables_filter input{
+		width:60% !important;
+		float: right !important; 
+		color: #6A6969;
+		border: 1px solid #CCC;
+		-moz-border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    -khtml-border-radius: 4px;
+	    border-radius: 4px;
+	}
+	#allSamplesColor_filter {
+		margin-right: 0px !important;
+		font-size: 0.9rem !important;
+	}
+	#allSamplesColor {
+		font-size: 0.8rem !important;
+	}
+	/* table head */
+	#allSamplesColor .sorting{
+		font-size: 0.8rem !important;
+	}
+	/* 分页上边的文字 */
+	.dataTables_info {
+		font-size: 0.8rem !important;
+	}
+	/* 分页 */
+	#allSamplesColor_paginate {
+		font-size: 0.8rem !important;
+	}
+	/*search input 更改 */
+	
+	/* 特定id table设定最后一列含有背景颜色 */
+	
+	/* 显示条目控制和下载 start*/
+	
+	.dataTables_length label{
+		margin-top: 5px;
+		margin-right: 10px;
+		margin-bottom: 15px;
+	}
+	.dataTables_filter{
+		margin-top: 5px;
+	}
+	
+	/* 显示条目控制和下载 end*/
+	
+	/* 删除wordcloud的页数控制  start*/
+	#wordCloudresults .dataTables_length{
+		display:none;
+	}
+	/* 删除wordcloud的页数控制  end*/
+	
+/* Datatable css 修改 */
+		
+/* nycbudget tip start*/
+	.tooltipNycbudget {
+		width:auto;
+		position: absolute;
+		top: 100px;
+		left: 100px;
+	  -moz-border-radius:5px;
+		border-radius: 5px;
+	  border: 1px solid #D5D5D5;
+		/* background: #222222; */
+	  background: rgba(255,255,255,0.9);
+		opacity: .9;
+		/* color: #eeeeee; */
+	  color: #000;
+		padding: 10px;
+		width: 300px;
+		font-size: 15px;
+		z-index: 10;
+		text-align: center;
+		line-height: 24px;
+		font-family: arial,helvetica,sans-serif;
+	    font-size: 1.1em;
+	    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	}
+	
+	
+	.tooltipNycbudget .title {
+		font-size: 13px;
+	}
+	
+	.tooltipNycbudget .name {
+	  font-weight:bold;
+	}
+	.circleText {
+	font:italic bold 10px arial,sans-serif;
+	text-anchor: middle;
+	dominant-baseline:middle;
+	pointer-events:none;
+	}
+/* nycbudget tip end*/
+
+
+/* set input div class start*/
+.inputFile {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.inputFile:focus {
+  /* color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); */
+   background-color: black;
+}
+/* set input div class end*/
+
+
+/* D3 设计比较直观统一及通用的  */
+.highlighted {
+	fill-opacity:0.5;
+	stroke:red;
+	stroke-width:1.5;
+}
+/*end*/
+
+/*download css*/
+#downloadbox.hidden {
+	display: none;
+}
+
+#downloadbox {
+	position: absolute;
+	padding: 24px;
+	text-align: left;	
+	z-index: 1000;
+}
+#box-container ul {
+	pointer-events: visible;
+	border-style: none;
+}
+#box-container ul li {
+	cursor: pointer;
+    padding: 0.5em 1em;
+    background: none;
+    color: rgb(51, 51, 51);
+    font-size: 11px;
+    transition: background 250ms, color 250ms;
+}
+#box-container {
+	box-shadow: rgb(136, 136, 136) 3px 3px 10px;
+    border: 1px solid rgb(153, 153, 153);
+    background: rgb(255, 255, 255);
+    padding: 5px 0px;
+	z-index: 2000;
+	font-size: 11px;
+}
+/*downlaod end*/
+/* qTip setting start */
+.TIPqTip {
+	color:#00548B;
+}
+
+/* qTip setting end */
+
+/* download css start*/
+.menugroup{
+	position: absolute;
+	top:20px;
+	right:20px;
+}
+/* download css end*/
+
+
+
+/*修改bootstrap-select展示的边框 start*/
+/*在js/bootstrap-select-1.13.0/dist/js/bootstrap-select.js中添加bootstrapSelectButton */
+.bootstrapSelectButton {
+	border: 1px solid #ced4da !important;
+	background-color: #fff !important;
+	color: #495057 !important;
+}
+/*修改bootstrap-select展示的边框 end*/
+
+
+
+/* home timeline 时间线 开始*/
+.timeline {
+  position: relative;
+  padding: 5px 0 5px;
+  list-style: none;
+}
+.timeline:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* left: 50%; */
+  left: 2%;
+  width: 3px;
+  margin-left: -1.5px;
+  background-color: #eeeeee;
+}
+.timeline > li {
+  position: relative;
+  margin-bottom: 20px;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  float: left;
+  position: relative;
+  /* width: 46%; */
+  width: 88%;
+  padding: 10px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li > .timeline-panel:before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #ccc;
+}
+.timeline > li > .timeline-panel:after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  border-top: 14px solid transparent;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #fff;
+}
+.timeline > li > .timeline-badge {
+  z-index: 100;
+  position: absolute;
+  top: 29px;
+  /* left: 50%; */
+  left: -1%;
+  width: 22px;
+  height: 22px;
+  margin-left: -1px;
+  border-radius: 50% 50% 50% 50%;
+  text-align: center;
+  font-size: 1em;
+  line-height: 22px;
+  color: #fff;
+  background-color: #999999;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+@media (max-width: 767px) {
+  ul.timeline:before {
+    left: 40px;
+  }
+  ul.timeline > li > .timeline-panel {
+    width: calc(10%);
+    width: -moz-calc(10%);
+    width: -webkit-calc(10%);
+  }
+  ul.timeline > li > .timeline-badge {
+    top: 16px;
+    left: 15px;
+    margin-left: 0;
+  }
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+  ul.timeline > li > .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+  }
+  ul.timeline > li > .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+  }
+}
+.border-bottom{
+border-bottom: 1px dotted #999999;
+}
+
+/* home timeline 时间线 end*/

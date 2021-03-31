@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://bioinfo.life.hust.edu.cn/ImmuCellAI-mouse/#!/contact -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+
+    
+    <title>LiverCellAtlas</title>
+
+
+    <link rel="stylesheet" href="./files/bootstrap.css"> <!--新增-->
+    <link rel="stylesheet" type="text/css" href="./files/bootstrap.min.css">
+    <link rel="stylesheet" href="./files/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./files/selectize.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="./files/main.css">
+    <link rel="shortcut icon" href="./logo.ico">
+    <title>LiverCellAtlas</title>
+    <style type="text/css">
+        .btn-link
+        {
+            color: #54aced;
+            font-size: 1.2rem;
+            font-family: Avenir-black,Arial,sans-serif;
+        }
+        .highcharts-figure, .highcharts-data-table table {
+            min-width: 800px; 
+            max-width: 1068Px;
+            margin: 1em auto;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+        .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+        .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+    </style>
+</head>
+
+
+
+
+    </head>
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body style="background-color: rgb(204, 232, 207);">
+      <div class="container-fluid">
+    
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;border-color: #fff;    box-shadow: 1px 3px 1px #ddd;">
+        <a class="navbar-brand logoviz" href=/index.jsp">
+          <img src="./LogoLiver.png" alt="Name" class="d-inline-block align-center logowidth"> <span style="text-align:center; font-weight: bold; font-size: larger">Liver Single Cell Atlas</span>
+        </a>
+    
+        <button class="navbar-toggler hidden-md-up float-md-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-toggleable-sm navbarcustom" id="collapsibleNavbar">
+         <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" id="HomePage">
+                      <a class="nav-link" href="/index.jsp">Home</a>
+                    </li>
+                    <li class="nav-item" id="BrowsePage">
+                      <a class="nav-link" href="/browse.jsp">Browse</a>
+                    </li>
+                    <li class="nav-item" id="SearchPage">
+                      <a class="nav-link" href="/search.jsp">Search</a>
+                    </li>
+                    <li class="nav-item" id="SubmitPage">
+                      <a class="nav-link" href="/submit.jsp">Submit</a>
+                    </li>
+                    <li class="nav-item" id="DownloadPage">
+                      <a class="nav-link" href="/download.jsp">Download</a>
+                    </li>
+                    <li class="nav-item  active" id="Contact Usage">
+                        <a class="nav-link" href="/ContactUs.jsp">Contact Us</a>
+                      </li>
+    
+                    <li class="nav-item" id="HelpPage">
+                      <a class="nav-link" href="/help.jsp">Help</a>
+                    </li>
+                  </ul>
+                </div>
+    
+       </div>
+
+<div>
+    <div ng-view="" class="ng-scope"><div class="row ng-scope">
+<table width="100%" border="1">
+
+</table>
+    <div style="margin-left: 10px">
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5>Ph.D Professor of Biomedical Photonics</h5>
+                    <h5>Zhi-hong Zhang</h5>
+                    <img src="./zhang.png" style="width: 250px;height: 40px">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5>Ph.D Professor in Bioinformatics</h5>
+                    <h5>An-Yuan Guo</h5>
+                    <img src="./guo.png" style="width: 250px;height: 40px">
+                </div>
+            </div>
+        </div>
+         <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5>Ph.D candidate</h5>
+                    <h5>Qi Pan</h5>
+                    <img src="./pan.png" style="width: 250px;height: 40px">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5> M.S. student</h5>
+                    <h5>Xin Fu</h5>
+                    <img src="./fx.png" style="width: 250px;height: 40px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div></div>
+</div>
+
+<footer class="py-5 navbar-light" style="background-color: #fff; border-color: #fff; box-shadow: 1px -2px 1px #ddd;">
+    <div class="container" style="margin-bottom: 20px;">
+        <div style="width:75%;float:left;">
+          <p class="m-0 text-center text-secondary" style="text-align: left !important; ">Copyright &copy; Zhang Lab, Wuhan National Laboratory for Optoelectronics, HUST, China.</p>
+          <p class="m-0 text-center text-secondary" style="text-align: left !important; ">For questions, comments, please contact us.</p>
+
+        </div>
+        <div style="width:25%;float:left; display: inline-block;">
+            <div style="float:right; ">
+                <a href="http://wnlo.hust.edu.cn/index.htm" target="_blank"><img src="./wnlo.jpg" style="width: 300px"> </a>
+            </div>
+       </div>
+
+
+    </div>
+
+    <!-- /.container -->
+  </footer>
+
+
+
+
+<div id="ss-connect-dialog" style="display: none;"></div>
+    <div id="ss-overlay" class="ss-gray-out" style="display: none;"></div>
+    <div class="jvectormap-tip"></div>
+</body>
+</html>

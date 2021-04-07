@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+  padding-bottom: 30px;
+}
+
+.container {
+    width: 80%;
+}
+
+#navContainer {
+	background-color: #E0E0E0;
+    height:60px;
+    width: 100%;
+}
+
+#menuContainer>li {
+	
+	width:16%;
+}
+
+#menuContainer>li>a {
+	color: #fff;
+    height: 40px;
+	font-size: 120%;
+}
+
+#menuContainer>li>a:HOVER {
+	background-color: rgb(76,150,223);
+}
+
+#menuContainer>li.active>a {
+	background-color: rgb(76,150,223);
+}
+
+#panel-heading
+{
+	background: rgb(224,224,224);
+}
+

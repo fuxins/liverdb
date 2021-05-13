@@ -12,21 +12,29 @@ angular.module('liverdb', ['ui.bootstrap', 'ngRoute', 'pageslide-directive', 'ui
                 controller: "HomeController"
             })
             .when("/browse",{
-                //templateUrl:"/static/liverdb/pages/browse.html",
-                //controller:"BrowseController"
-                templateUrl:"/static/liverdb/pages/liver_browsePage.html",
-                controller:"BrowsePageController"
+                templateUrl:"/static/liverdb/pages/browse.html",
+                controller:"BrowseController"
+                //templateUrl:"/static/liverdb/pages/liver_browsePage.html",
+                //controller:"BrowsePageController"
             })
             .when("/search",{
                 templateUrl:"/static/liverdb/pages/search.html",
                 controller:"SearchController"
             })
-            .when("/document", {
-                templateUrl: "/static/liverdb/pages/document.html",
+            .when("/dataset",{
+                templateUrl:"/static/liverdb/pages/DataSet.html",
+                controller:"DataSetController"
+            })
+            .when("/download", {
+                templateUrl: "/static/liverdb/pages/download.html",
                 //controller: "HomeController"
             })
             .when("/contact", {
-                templateUrl: "/static/liverdb/pages/contact.html",
+                templateUrl: "/static/liverdb/pages/Contact Us.html",
+                //controller: "HomeController"
+            })
+            .when("/help", {
+                templateUrl: "/static/liverdb/pages/help.html",
                 //controller: "HomeController"
             })
             .when("/test",{

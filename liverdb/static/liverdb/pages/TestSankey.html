@@ -327,7 +327,7 @@ return sankey;
  var nodes = [ { "name" : "A1" }, { "name" : "B1" }, { "name" : "C1" }, { "name" : "D1" }, { "name" : "A2" }, { "name" : "B2" }, { "name" : "C2" }, { "name" : "D2" }, { "name" : "A3" }, { "name" : "B3" }, { "name" : "C3" }, { "name" : "D3" }, { "name" : "A4" }, { "name" : "B4" }, { "name" : "C4" }, { "name" : "D4" }, { "name" : "A5" }, { "name" : "B5" }, { "name" : "C5" }, { "name" : "D5" }, { "name" : "A6" }, { "name" : "B6" }, { "name" : "C6" }, { "name" : "D6" } ] ; 
  var margin = {top: 1, right: 1, bottom: 6, left: 1},
 width = 900 - margin.left - margin.right,
-height = 600 - margin.top - margin.bottom;
+height = 400 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),
 format = function(d) { return formatNumber(d); },

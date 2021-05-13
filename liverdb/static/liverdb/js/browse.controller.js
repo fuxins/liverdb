@@ -66,3 +66,4 @@ function BrowseController($scope,$http,$routeParams,$window) {
         $window.location.reload();
     };
 }
+

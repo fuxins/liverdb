@@ -14,15 +14,17 @@ function ProjectDetailController($scope,$http,$routeParams,$window) {
             method:'GET',
             params:condition
         }).then(function(response){
-            console.log("project_list")
+            console.log("project_list value")
+            console.log(response.data)
             $scope.project=response.data.project_list[0]
+            console.log($scope.project);
+
             $scope.project.Accession=$scope.project.Accession.replace(/\"/g,"")
             $scope.project.Protocol=$scope.project.Protocol.replace(/\"/g,"")
             $scope.project.gene_count=$scope.project.gene_count.replace(/\"/g,"")
             $scope.project.cell_count=$scope.project.cell_count.replace(/\"/g,"")
             $scope.project_count=response.data.project_count
-            console.log($scope.project);
-
+           
         })
     }
     $scope.getproject()

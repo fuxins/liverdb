@@ -1,3 +1,17 @@
+<style type="text/css">
+    .dataTables_scrollBody
+    {
+        border-bottom: 2px solid rgb(6, 8, 10);
+    }
+    .hover-text {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      text-align: center;
+      font-size: 0.8rem
+    }
+</style>
 <div>
     <p>We scanned xx project from xxxx. A total of xxx cells are involved in Live Cell Atlas.</p>
 </div>
@@ -21,21 +35,51 @@
     </div>
 </div>
 <br>
+<br>
 <div>
-    <table class="table" style="table-layout:fixed;padding-top: 15px;">
-        <thead>
-            <tr>
-                <th>Accession</th>
-                <th>Species</th>
-                <th>Title</th>
-                <th>Journal(year)</th>
-                <th>No. cells</th>
-                <th>PMID</th>
-                <th>Details</th>
+<p style="font-size:2rem" >Return 39 across 39 datasets</p>
+</div>
+<form method="get" id="select_form">
+    <input type="hidden">
+    <div class="container" style="margin-bottom: 6rem;">
+        <div id="dataset-table_wrapper" class="dataTables_wrapper">
+        <div class="row">
+    </div>
+    </div>
+    <table class="table dataTable justify-content-center table-hover table-bordered table-sm no-footer" style="font-size: 0.8rem; margin-left: 0px; width: 1010px;" role="grid">
+        <thead class="thead">
+        <tr role="row">
+            <th scope="col" style="vertical-align: middle; width: 7px;" class="text-center sorting_disabled" rowspan="1" colspan="1" aria-label=""></th>
+            <th scope="col" style="vertical-align: middle; width: 103px" >Accession</th>
+            <th scope="col" style="vertical-align: middle; width: 40px">Species</th>
+            <th scope="col" style="vertical-align: middle; width: 500px">Title</th>
+            <th scope="col" style="vertical-align: middle;  width: 120px" >Journal(year)</th>
+            <th scope="col" style="vertical-align: middle; width: 80px" >No.cells</th>
+            <th scope="col" style="vertical-align: middle; width: 80px" >PMID</th>
+            <th scope="col" style="vertical-align: middle; width: 80px" >Details</th>
+        </tr>
+        </thead></table>
+    <div class="dataTables_scrollBody" style="position: relative; overflow: auto; max-height: 40vh; width: 100%;">
+    <!-- <table class="table" style="table-layout:fixed;padding-top: 15px;"> -->
+
+            <table class="table dataTable justify-content-center table-hover table-bordered table-sm no-footer" style="font-size: 0.8rem; margin-left: 0px; width: 1010px;" role="grid">
+             <thead class="thead">
+            <tr role="row">
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 7px;" class="text-center sorting_disabled" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;"></div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 103px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Accession</div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 40px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Species</div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 500px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Title</div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 120px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Journal(year)</div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 80px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">No.cells</div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 80px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">PMID</div></th>
+                <th scope="col" style="vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 80px" class="sorting" aria-controls="dataset-table" rowspan="1" colspan="1"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Details</div></th>
             </tr>
-        </thead>
+        </thead> 
         <tbody>
             <tr ng-repeat="v in project_list">
+                <td style="vertical-align: middle; text-align: center;" class="checkbox-td">
+                    <input type="checkbox" value="{$v.Title$}" name="dataset_checkbox_list" style="margin-top: 0.19rem;">
+                </td>
                 <th>{$v.Accession$}</th>
                 <td>{$v.Species$}</td>
                 <td>{$v.Title$}</td>
@@ -49,6 +93,60 @@
                     </span>
                 </td>
             </tr>
+        
         </tbody>
     </table>
+</div>
+<div style="margin-top: 2rem;">
+    <button type="button" id="select_button" class="btn btn-default" style="background-color: #00CED1;color: #FFFFFF; border: 2px #00BFFF none;">Compare</button>
+</div>
+</div>
+</form>
+
+<div class="container">
+    <div class="panel-body">
+    <div class="panel panel-info ng-scope">
+                <div class="form-group">
+                    <div class="col-lg-3">
+                        <select id="reduction" class="form-control" style="width: 50%; position: relative; top:20px">
+                            <option selected>UMAP</option>
+                            <option>tSNE</option>
+                        </select>   
+                    </div>
+                    <form id="gene-form-multiple" name="gene-form-multiple" onsubmit="return false" method="get"  style="position: relative; bottom:20px;left: 200px;">
+                        <div class="col-lg-3">
+                        <input type="hidden" name="" value="" >
+                                <input type="text" class="form-control input-xs ng-pristine ng-untouched ng-valid ng-empty" id="" ng-model="" placeholder="Search gene (up to 6)">
+                            </div>
+                        <button class="btn btn-default" style="background-color: #00CED1;color: #FFFFFF; border: 2px #00BFFF none;" type="submit" id="button-addon2">Search</button>
+                       </form>
+                </div>
+            
+
+
+<!-- <ul class="list-group list-group-flush text-left" id="dataset-list"><li class="list-group-item" id="BLCA_GSE130001" style="padding-top: 1rem;"><div class="container pr-0"><div class="row align-items-end justify-content-md-start"><div class="col-lg-5" style="overflow: scroll; width: 445px;"><img class="umap_celltype_multiple" src="/static/liverdb/img/BLCA_GSE130001_umap_Celltype_curated.png" style="height: 280px;"></div><div class="col-lg-7" style="overflow-x: scroll; margin-left: -2rem;"><div class="row flex-nowrap"></div></div></div></div></li><li class="list-group-item" id="BLCA_GSE145281_aPDL1" style="padding-top: 1rem;"><div class="container pr-0"><div class="row align-items-end justify-content-md-start"><div class="col-lg-5" style="overflow: scroll; width: 445px;"><img class="umap_celltype_multiple" src="/static/liverdb/img/BLCA_GSE145281_aPDL1_umap_Celltype_curated.png" style="height: 280px;"></div><div class="col-lg-7" style="overflow-x: scroll; margin-left: -2rem;"><div class="row flex-nowrap"></div></div></div></div></li><li class="list-group-item" id="SKCM_GSE139249" style="padding-top: 1rem;"><div class="container pr-0"><div class="row align-items-end justify-content-md-start"><div class="col-lg-5" style="overflow: scroll; width: 445px;"><img class="umap_celltype_multiple" src="/static/liverdb/img/SKCM_GSE139249_umap_Celltype_curated.png" style="height: 280px;"></div><div class="col-lg-7" style="overflow-x: scroll; margin-left: -2rem;"><div class="row flex-nowrap"></div></div></div></div></li><li class="list-group-item" id="SKCM_GSE148190" style="padding-top: 1rem;"><div class="container pr-0"><div class="row align-items-end justify-content-md-start"><div class="col-lg-5" style="overflow: scroll; width: 445px;"><img class="umap_celltype_multiple" src="/static/liverdb/img/SKCM_GSE148190_umap_Celltype_curated.png" style="height: 280px;"></div><div class="col-lg-7" style="overflow-x: scroll; margin-left: -2rem;"><div class="row flex-nowrap"></div></div></div></div></li></ul> -->
+
+<li class="list-group-item" id="AEL_GSE142213" style="padding-top: 1rem;">
+    <div class="container pr-0" style="height: 320px;">
+        
+        <div class="col-lg-5" style="overflow: scroll; width: 445px; position: relative; right: 100px;"><img class="umap_celltype_multiple" src="/static/liverdb/img/BLCA_GSE130001_umap_Celltype_curated.png" style="height: 280px;"></div>
+        
+        <div class="col-lg-7" style="height: 280px; display:inline; overflow-y: scroll; margin-left: -2rem; position: relative; bottom:300px;left: 400px;">
+            <div  class="row flex-nowrap">
+                <div  style=" display:inline"><img src="/static/liverdb/img/BLCA_GSE130001_A2M_umap.png" style="height: 280px;"></div>
+                <div  style=" display:inline"><img src="/static/liverdb/img/BLCA_GSE130001_A1BG_umap.png" style="height: 280px"></div> 
+                <div  style=" display:inline"><img src="/static/liverdb/img/BLCA_GSE145281_aPDL1_A1BG_umap.png" style="height: 280px"></div>
+</div></div></div></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="container">
+            <div id="loading" style="display: none;">
+                <img src="/static/liverdb/img/loading.gif">
+            </div>
+        </div>
+    </div>
 </div>

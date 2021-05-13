@@ -24,7 +24,7 @@
                     <strong>PubMed</strong>
                 </td>
                 <td style="text-align: left" colspan="6">
-                    {$project.Title$};{$project.Journal$}({$project.Year$});{$project.PMID$}
+                    {$project.Title$};{$project.Journal$}({$project.Year$});PMID:{$project.PMID$}
                 </td>
             </tr>
             <tr>
@@ -46,7 +46,9 @@
             <tr>
                 <td style="font-size: 18px;" width="200px" >
                     <strong>Condition</strong>
-                </td>
+                   <!-- <td style="text-align: left" colspan="6">
+                        {$project.Condition$}
+                </td> -->
                 <td style="text-align: left" colspan="6">
                     {$project.Stage$}; {$project.Source$}
                 </td>
